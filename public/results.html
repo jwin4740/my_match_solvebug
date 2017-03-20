@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>RESULTS PAGE</title>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-2.2.4.js" integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI=" crossorigin="anonymous"></script>
+    <script src="https://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans|Ranga" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="/">HOME</a>
+            </div>
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li><a href="/survey">Take Survey</a></li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a target="_blank" href="/api/friends">API friends link</a></li>
+                    <li><a target="_blank" href="/api/user">API user link</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Explore <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a target="_blank" href="http://jamesjwinkle.herokuapp.com">James Portfolio</a></li>
+                            <li><a target="_blank" href="https://github.com/jwin4740">James's Github</a></li>
+                            <li><a target="_blank" href="#">James's YouTube Code Walkthroughs</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="container main">
+        <div class="mainBanner">
+            <h1 class="text-center res"><span class="glyphicon glyphicon-user"></span> CONGRATULATIONS YOUR MATCH IS <span id="matchNameHead"></span> <span class="glyphicon glyphicon-user"></span></h1>
+            <br>
+            <div class="row">
+                <div class="col-lg-1">
+                </div>
+                <div class="col-lg-4">
+                    <div class="panel panel-default matchboxuser">
+                        <div class="panel-body matcher" id="you">
+                            <img class="matchResult" id="yourImage" src="./images/Placeholder.png">
+                            <h3 id="userName">USERNAME</h3>
+                            <strong><p class="bio">AGE: (none) <span id="userAge"></span></p></strong>
+                            <strong><p class="bio">SHORT BIO: <span id="userBio"></span> </p></strong>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-2">
+                    <img class="rightarrow arrow" alt="arrowpic" src="./images/cupidarrow.png">
+                    <img class="leftarrow arrow" alt="arrowpic" src="./images/cupidarrow.png">
+                </div>
+                <div class="col-lg-4">
+                    <div id="animationStage">
+                        <!--  <div class="panel panel-default matchboxone">
+                            <div class="panel-body matcher">
+                                <img src="https://uwmccblog.files.wordpress.com/2017/01/image-placeholder-500x500.jpg?w=200" class="matchResult">
+                                <h6>MATCHNAME</h6>
+                                <strong><p class="bio">AGE: <span></span></p></strong>
+                                <strong><p class="bio">SHORT BIO: <span></span></p></strong>
+                            </div>
+                        </div>
+                        <div class="panel panel-default matchboxtwo">
+                            <div class="panel-body matcher">
+                                <img src="https://uwmccblog.files.wordpress.com/2017/01/image-placeholder-500x500.jpg?w=200" class="matchResult">
+                                <h6>MATCHNAME<h6>
+                                <strong><p class="bio">AGE: <span></span></p></strong>
+                                <strong><p class="bio">SHORT BIO: <span></span></p></strong>
+                            </div>
+                        </div> -->
+<!--     ddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd -->
+                        <div class="panel panel-default matchbox">
+                            <div class="panel-body matcher">
+                                <img src="https://uwmccblog.files.wordpress.com/2017/01/image-placeholder-500x500.jpg?w=200" class="matchResult" id="yourMatch">
+                                <h3 id="matchName">MATCHNAME</h3>
+                                <strong><p class="bio">AGE: <span id="matchAge"></span></p></strong>
+                                <strong><p class="bio">SHORT BIO: <span id="matchBio"></span></p></strong>
+                            </div>
+                        </div>
+<!-- ddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd- -->
+                        <!--       <div class="panel panel-default matchboxthree">
+                            <div class="panel-body matcher">
+                                <img src="https://uwmccblog.files.wordpress.com/2017/01/image-placeholder-500x500.jpg?w=200" class="matchResult"> 
+                                <h6>MATCHNAME</h6>
+                                <strong><p class="bio">AGE: <span></span></p></strong>
+                                <strong><p class="bio">SHORT BIO: <span></span></p></strong>
+                            </div>
+                        </div>
+                        <div class="panel panel-default matchboxfour">
+                            <div class="panel-body matcher">
+                                <img src="https://uwmccblog.files.wordpress.com/2017/01/image-placeholder-500x500.jpg?w=200" class="matchResult">
+                                <h6>MATCHNAME</h6>
+                                <strong><p class="bio">AGE: <span></span></p></strong>
+                                <strong><p class="bio">SHORT BIO: <span></span></p></strong>
+                            </div>
+                        </div> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+    //global variables
+    var dataArray = [];
+    var userDataObj = "";
+    var narrowedArray = [];
+    var yourMatch;
+    var shuffleArray = [];
+
+
+
+    // get request gets the user data from the api/user route
+    // the last element (if there are multiple this is the one the user just filled out)
+    // is popped out and stored in the userDataObj
+    $.ajax({
+            url: "/api/user",
+            method: "GET"
+        })
+        .done(function(data) {
+            userDataObj = data.pop();
+        });
+
+
+    // get request gets all the possible match profiles from the api/friends route
+    // and pushed them into dataArray
+    $.ajax({
+            url: "/api/friends",
+            method: "GET"
+        })
+        .done(function(data) {
+            var n = data.length;
+            getData();
+
+            function getData() {
+                for (var i = 0; i < n; i++) {
+                    dataArray.push(data[i]);
+                }
+                tossOut();
+            }
+        });
+
+
+
+    // essentially this function creates a new array (narrowedArray) of possible matches.
+    // it loops through the dataArray and adds a removalTag to them
+    function tossOut() {
+        var userGender = userDataObj.gender;
+        var userAgeRange = userDataObj.ageRange;
+        var n = dataArray.length;
+        for (var i = 0; i < n; i++) {
+            // ensures that the user gets a match of the opposite gender
+            if (dataArray[i].gender === userGender) {
+                dataArray[i].removalTag = true;
+            }
+
+            // pushes profiles to an array which will be used later for the shuffle effect
+            if (dataArray[i].gender != userGender) {
+                shuffleArray.push(dataArray[i]);
+            }
+            // ensures that the user gets a match of the age range they requested
+            switch (userAgeRange) {
+                case "all":
+                    break;
+                case "younger":
+                    if (dataArray[i].ageRange === "mid" || dataArray[i].ageRange === "older") {
+                        dataArray[i].removalTag = true;
+                    }
+                    break;
+                case "mid":
+                    if (dataArray[i].ageRange === "younger" || dataArray[i].ageRange === "older") {
+                        dataArray[i].removalTag = true;
+                    }
+                    break;
+                case "older":
+                    if (dataArray[i].ageRange === "younger" || dataArray[i].ageRange === "mid") {
+                        dataArray[i].removalTag = true;
+                    }
+                    break;
+            }
+        }
+        // loop through the dataArray and pushes any profile that doesn't have a removal tag
+        // to the narrowedArray
+        for (var i = 0; i < n; i++) {
+            if (dataArray[i].removalTag != true) {
+                narrowedArray.push(dataArray[i]);
+            }
+        }
+        getCompatibilityScores();
+    }
+
+    // this is the function that calculates a compatability score for each profile. For each question category they are given a matchNumber based on how similar their averages are. The one with the highest number is the best match for the user.
+
+    // the maximizer/minimizer (multiplyer/reducer) are parameters based on if the user selected a preference that they want their match to have or not have
+    // the user and match profile for a certain category will be weighted more or less accordingly
+    function getCompatibilityScores() {
+        var n = narrowedArray.length;
+        for (var i = 0; i < n; i++) {
+            for (var j = 0; j < 4; j++) {
+
+                var maximizer = 1;
+                var minimizer = 1;
+                var num = 0;
+                switch (true) {
+                    case (userDataObj.multiplyer === "leisure" && j === 0):
+                        maximizer = 2.5;
+                        break;
+                    case (userDataObj.multiplyer === "morals" && j === 1):
+                        maximizer = 2.5;
+
+                        break;
+                    case (userDataObj.multiplyer === "interests" && j === 2):
+                        maximizer = 2.5;
+
+                        break;
+                    case (userDataObj.multiplyer === "superficiality" && j === 3):
+                        maximizer = 2.5;
+
+                        break;
+                    default:
+                        break;
+                }
+                switch (true) {
+                    case (userDataObj.reducer === "leisure" && j === 0):
+                        minimizer = 0.5;
+
+                        break;
+                    case (userDataObj.reducer === "morals" && j === 1):
+                        minimizer = 0.5;
+
+                        break;
+                    case (userDataObj.reducer === "interests" && j === 2):
+                        minimizer = 0.5;
+
+                        break;
+                    case (userDataObj.reducer === "superficiality" && j === 3):
+                        minimizer = 0.5;
+
+                        break;
+                    default:
+                        break;
+                }
+                switch (true) {
+                    case (j === 0):
+                        num = Math.abs(parseInt(userDataObj.leisureAverage) - narrowedArray[i].leisureAverage);
+                        break;
+                    case (j === 1):
+                        num = Math.abs(parseInt(userDataObj.moralsAverage) - narrowedArray[i].moralsAverage);
+                        break;
+                    case (j === 2):
+                        num = Math.abs(parseInt(userDataObj.interestsAverage) - narrowedArray[i].interestsAverage);
+                        break;
+                    case (j === 3):
+                        num = Math.abs(parseInt(userDataObj.superficialityAverage) - narrowedArray[i].superficialityAverage);
+                        break;
+                }
+
+                var num = num.toFixed(2);
+                var scaled = 0; // scaled needs to be reset to 0 each time through the loop
+
+                // this is the switch statement where all the calculations happen
+                switch (true) {
+                    case (num < 1):
+                        scaled = 10 * minimizer * maximizer;
+                        break;
+                    case (num >= 1 && num < 2):
+                        scaled = 8 * minimizer * maximizer;
+                        break;
+                    case (num >= 2 && num < 3):
+                        scaled = 6 * minimizer * maximizer;
+                        break;
+                    case (num >= 3 && num < 4):
+                        scaled = 5 * minimizer * maximizer;
+                        break;
+                    case (num >= 4 && num < 5):
+                        scaled = 4 * minimizer * maximizer;
+                        break;
+                    case (num >= 5 && num < 6):
+                        scaled = 2 * minimizer * maximizer;
+                        break;
+                    case (num >= 6):
+                        scaled = 0;
+                        break;
+                }
+                // the calculated compatibility scores are updated as a property of each object
+                narrowedArray[i].compatibilityScore += scaled;
+            }
+        }
+        sortResults();
+    }
+
+    // sorts the results putting the highest compatibility profile at the end
+    // NOTE: I didn't feel the need to account for exact compatibility score matches because
+    // 1) It is unlikely
+    // 2) Even if it happens, I think it is a random enough process to not have to resort
+    //    any exact matches
+    function sortResults() {
+        var n = narrowedArray.length;
+        var temp;
+        for (var i = 0; i < n; i++) {
+            for (var j = 0; j < n; j++) {
+                if (j === n - 1) {
+                    break;
+                }
+                if (narrowedArray[j].compatibilityScore > narrowedArray[j + 1].compatibilityScore) {
+                    temp = narrowedArray[j];
+                    narrowedArray[j] = narrowedArray[j + 1];
+                    narrowedArray[j + 1] = temp;
+                }
+            }
+        }
+        displayUserData();
+
+    }
+
+
+    function displayUserData() {
+        var yourName = "USERNAME";
+        if (userDataObj.friendName != "") {
+            yourName = userDataObj.friendName;
+        }
+
+         if (userDataObj.friendName == "") {
+           userDataObj.friendName = "USERNAME";
+        }
+
+        var upperYou = yourName.toUpperCase();
+
+        $("#userName").html(upperYou);
+        $("#userBio").html(userDataObj.friendBio);
+        if (userDataObj.imageUrl != "") {
+            $("#yourImage").attr("src", userDataObj.imageUrl);
+        }
+displayMatchDetails();
+    }
+
+
+
+    function shuffleEffect() {
+        var shuffleCount = 0;
+        // var shuffle = setInterval(shuffleEffect, 1500);
+
+        var x = 0;
+
+        //         function shuffleEffect() {
+        //             var n = shuffleArray.length;
+        //             var randNum = Math.floor(Math.random() * n);
+        //             var matchAgeTemp;
+        //             if (shuffleArray[randNum].ageRange === "younger") {
+        //                 matchAgeTemp = "(18 - 29)";
+        //             } else if (shuffleArray[randNum].ageRange === "mid") {
+        //                 matchAgeTemp = "(30 - 39)";
+        //             } else if (shuffleArray[randNum].ageRange === "older") {
+        //                 matchAgeTemp = "(40 - 49)";
+        //             } else {
+        //                 matchAgeTemp = "(none displayed)";
+        //             }
+        //             var matchNameTemp = shuffleArray[randNum].friendName;
+        //             var upperMatchTemp = matchNameTemp.toUpperCase();
+        //             var borderArray = ["solid 10px purple", "solid 10px yellow", "solid 10px blue", "solid 10px white", "solid 10px black"];
+
+
+        // // 4,3,1,2
+        //             $(".matchboxfour").css("border", borderArray[x + 5] % 5);
+        //             $(".matchboxthree").css("border", borderArray[(x + 1) % 5]);
+        //             $(".matchbox").css("border", borderArray[(x + 2) % 5]);
+        //             $(".matchboxone").css("border", borderArray[(x + 3) % 5]);
+        //             $(".matchboxtwo").css("border", borderArray[(x + 4) % 5]);
+
+
+
+        //             x++;
+
+
+
+        //             $("#matchNameHead").html(upperMatchTemp);
+        //             $("#matchName").html(upperMatchTemp);
+        //             $("#matchAge").html(matchAgeTemp);
+        //             $("#yourMatch").attr("src", shuffleArray[randNum].imageUrl);
+        //             shuffleCount++;
+        //             if (shuffleCount > 20) {
+        //                 finalResult();
+        //                 clearInterval(shuffle);
+        //             }
+
+        //         }
+    }
+
+
+
+
+    // function that displays the match content in the html by using the userDataObj and match profile
+    function displayMatchDetails() {
+        var n = narrowedArray.length;
+        // your match gets the last element in the narrowedArray
+        var yourMatch = narrowedArray[n - 1];
+        var matchAge;
+        var matchName = yourMatch.friendName;
+        var upperMatch = matchName.toUpperCase();
+
+        if (yourMatch.ageRange === "younger") {
+            matchAge = "(18 - 29)";
+        } else if (yourMatch.ageRange === "mid") {
+            matchAge = "(30 - 39)";
+        } else if (yourMatch.ageRange === "older") {
+            matchAge = "(40 - 49)";
+        } else {
+            matchAge = "(none displayed)";
+        }
+        $("#matchNameHead").html(upperMatch);
+        $("#matchName").html(upperMatch);
+        $("#matchAge").html(matchAge);
+        $("#yourMatch").attr("src", yourMatch.imageUrl);
+        $("#matchBio").html("Based on your quiz results we should be a great match!!!");
+        userDataObj = "";
+
+    }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Make a Match</title>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-2.2.4.js" integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI=" crossorigin="anonymous"></script>
+    <script src="https://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans|Ranga" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="/">HOME</a>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li><a href="/survey">Take Survey</a></li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a target="_blank" href="/api/friends">API friends link</a></li>
+                     <li><a target="_blank" href="/api/user">API user link</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Explore <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a target="_blank" href="http://jamesjwinkle.herokuapp.com">James Portfolio</a></li>
+                            <li><a target="_blank" href="https://github.com/jwin4740">James's Github</a></li>
+                            <li><a target="_blank" href="#">James's YouTube Code Walkthrough</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="container main">
+        <div class="mainBanner">
+            <h1 class="text-center"><span class="glyphicon glyphicon-user"></span> Make a Match <span class="glyphicon glyphicon-user"></span>
+      </h1>
+            <img class="headerimage" src="./images/header.jpg" alt="matchlogo">
+            <br>
+            <div class="text-center">
+                <a href="/survey">
+                    <a href="/survey">
+                        <button id="clickMe" type="button" class="btn btn-lg btn-primary" style="font-weight: bolder; background-color: red; color: black; font-size: 26px; width: 20%;"><span class="glyphicon glyphicon-search"></span> Find your match</button>
+                    </a>
+                </a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
